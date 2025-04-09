@@ -244,6 +244,7 @@ This event type supports filters and selectable fields.
 | http.response.headers | Map&lt;string, List&lt;string&gt;&gt; | A map of normalized response headers. Header keys are capitalized and header values are lowercased. |
 | http.response.status_code | int32 | The status code of the response returned by the ngrok edge |
 | ip_policy.decision | string | 'allow' if IP Policy module permitted the request to the upstream service, 'block' otherwise |
+| ja4_fingerprint | string | The JA4 fingerprint of the client TLS handshake |
 | oauth.app_client_id | string | The OAuth application client ID |
 | oauth.decision | string | 'allow' if the OAuth module permitted the request to the upstream service, 'block' otherwise |
 | oauth.user.id | string | The authenticated user's ID returned by the OAuth provider |
@@ -608,6 +609,7 @@ This event type supports filters and selectable fields.
 | conn.server_port | int32 | filterable | The port that the connection for this request came in on |
 | conn.start_ts | timestamp | The timestamp when the TCP connection to the ngrok edge is established |
 | ip_policy.decision | string | 'allow' if IP Policy module permitted the request to the upstream service, 'block' otherwise |
+| ja4_fingerprint | string | The JA4 fingerprint of the client TLS handshake |
 | traffic_policy.logs | List&lt;Map&lt;string, string&gt;&gt; | Logs collected from the log action in a Traffic Policy |
 
 import TLSCertificate from "./_tls-certificate.md";
